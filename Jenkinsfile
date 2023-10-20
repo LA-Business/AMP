@@ -56,7 +56,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "ssh -i /var/lib/jenkins/LAGaming.pem admin@172.31.19.193 'sudo sh /home/admin/feature/autodeploy-amp-dutaplay.sh'"
+                sh "ssh -i /var/lib/jenkins/LAGaming.pem admin@172.31.21.105 'sudo sh /home/admin/feature/autodeploy-amp-dutaplay.sh'"
             }
         }
 		stage("Telegram message: deployed") {

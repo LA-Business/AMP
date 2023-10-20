@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>My AMP Page</title>
+  <title>DutaPlay</title>
   <link rel="canonical" href="self.html" />
   <meta name="viewport" content="width=device-width" />
   <style amp-boilerplate>
@@ -85,21 +85,55 @@
     }
 
     a {
-      background:linear-gradient(#f17a77, #ee5f5b 60%, #ec4d49);
+      background: linear-gradient(#f17a77, #ee5f5b 60%, #ec4d49);
       color: white;
       padding: 12px 20px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      margin:1rem
+      margin: 1rem
     }
-    div{
+
+    div {
       text-align: center;
-      
+
     }
-    body{
-      background:#402f04  ;
+
+    body {
+      background: #402f04;
     }
+    @media (min-width: 406px) {
+     .ImageDesktop {
+        display: flex;
+    }
+    .ImageMobile {
+        display: none;
+    } 
+    a {
+      padding: 24px 40px;
+      font-size: 24px;
+    }
+    .ButtonAll{
+      margin-top:3rem;  
+      padding-top: 3rem; 
+      margin-bottom: 3rem;
+       padding-bottom: 3rem;
+    }
+}
+@media (max-width: 406px) {
+  .ImageMobile {
+        display: flex;
+    }
+    .ImageDesktop {
+        display: none;
+    }
+    .ButtonAll{
+      margin-top:1rem;  
+      padding-top: 1rem; 
+      margin-bottom: 1rem;
+       padding-bottom: 1rem;
+}
+}
   </style>
 </head>
 
@@ -108,27 +142,24 @@
     <amp-img alt="A view of the sea" src="Images/logoweb.png" width="224" height="98" layout="fixed">
     </amp-img>
   </p>
-  <amp-carousel width="auto" height="185" type="slides" role="region" aria-label="Basic carousel">
-    <amp-img src="Images/upload-MobileSlides-20230720135549.jpg" width="600" height="200" layout="responsive">
-    </amp-img>
-
-    <amp-img src="Images/upload-MobileSlides-20230720135549.jpg" width="600" height="200" layout="responsive">
-    </amp-img>
-
-    <amp-img src="Images/upload-MobileSlides-20230720135549.jpg" width="600" height="200" layout="responsive">
-    </amp-img>
-
-  </amp-carousel>
-  <div style="margin-top:1rem;  padding-top: 1rem; margin-bottom: 1rem; padding-bottom: 1rem;">
+    <amp-img class="ImageMobile"  src="Images/upload-MobileSlides-20230720135549.jpg"  width="600" height="280" layout="responsive" ></amp-img>
+    <amp-img class="ImageDesktop"  src="Images/upload-Slides-20230720135035.jpg" width="1900" height="380" > </amp-img>
+  <div class="ButtonAll">
     <a href="https://dutaplay.beauty/">
       Login
     </a>
-  <a href="https://dutaplay.beauty/?content=register" style="background: linear-gradient(#74cae3, #5bc0de 60%, #4ab9db);">
+    <a href="https://dutaplay.beauty/?content=register"
+      style="background: linear-gradient(#74cae3, #5bc0de 60%, #4ab9db);">
       Register
-  </a>
+    </a>
   </div>
-<amp-img src="Images/mproviders.png" width="921" height="788" layout="responsive" style="margin-top:1rem">
-</amp-img>
+ <div style="background:black">
+  <amp-img class="ImageMobile" src="Images/mproviders.png" width="921" height="788" layout="responsive" style="margin-top:1rem">
+  </amp-img>
+  <amp-img class="ImageDesktop" src="Images/providers.png" width="927" height="156" layout="responsive" style="margin-top:1rem">
+  </amp-img>
+  
+ </div>
 </body>
 
 </html>
